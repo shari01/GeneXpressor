@@ -32,8 +32,7 @@ GeneXpressor --help</code></pre>
 ├─ metadata.csv       # sample info; must include the condition column
 └─ (optional extra files)</code></pre>
 
-    <h3>Example metadata.csv:</h3>
-    <pre><code>sample   condition
+
 S1       Disease
 S2       Control
 S3       Disease
