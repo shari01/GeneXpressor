@@ -3,62 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>⚙️ GeneXpressor 💡</title>
-  <style>
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.6;
-      margin: 40px;
-      background-color: #f8f9fa;
-      color: #222;
-    }
-    h1, h2, h3 {
-      color: #2c3e50;
-    }
-    code, pre {
-      background-color: #eee;
-      border-radius: 6px;
-      padding: 4px 6px;
-      font-size: 0.95em;
-      color: #333;
-    }
-    pre {
-      padding: 10px;
-      overflow-x: auto;
-    }
-    ul {
-      margin-left: 20px;
-    }
-    .highlight {
-      background-color: #e3f2fd;
-      padding: 10px;
-      border-left: 4px solid #2196f3;
-      border-radius: 4px;
-    }
-    footer {
-      margin-top: 40px;
-      font-size: 0.9em;
-      color: #555;
-    }
-    a {
-      color: #007bff;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>⚙️ GeneXpressor 💡</h1>
-    <p>
-      <strong>GeneXpressor</strong> is a streamlined, user-friendly tool designed for bulk RNA-seq differential expression analysis, built on the robust <code>DESeq2</code> framework.
-      It intelligently detects your count and metadata files, automates the entire DESeq2 workflow, and generates publication-quality plots along with a reproducible HTML report—all with a single command.
-    </p>
-    <p>
-      Unlike traditional approaches, GeneXpressor allows you to process multiple datasets simultaneously, eliminating the need to select and analyze each dataset individually, making large-scale analyses faster and more efficient.
-    </p>
   </header>
 
   <section>
