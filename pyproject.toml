@@ -1,0 +1,42 @@
+[build-system]
+requires = ["hatchling>=1.24"]
+build-backend = "hatchling.build"
+
+[project]
+name = "GeneXpressor"      # display name on PyPI
+version = "0.1.7"          # bump for this fix
+description = "DESeq2 runner (Python + rpy2) for bulk RNA-seq with auto-discovery, E2E DE, plots, HTML report."
+readme = { file = "README.md", content-type = "text/markdown" }
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Sheryar Malik", email = "sheryarmalik1403@gmail.com" }]
+keywords = ["DESeq2","RNA-seq","differential-expression","bioinformatics","rpy2"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Topic :: Scientific/Engineering :: Bio-Informatics"
+]
+dependencies = ["rpy2>=3.5"]
+
+[project.urls]
+Homepage = "https://github.com/shari01/GeneXpressor"
+
+[project.scripts]
+# both scripts are fine; they call the same main()
+genexpressor = "genexpressor.cli:main"
+GeneXpressor = "genexpressor.cli:main"
+
+[tool.hatch.build]
+include = [
+  "src/genexpressor/**/*.py",
+  "src/genexpressor/resources/deseq2_runner.R",
+  "README.md",
+  "LICENSE"
+]
+
+[tool.hatch.build.targets.wheel]
+# IMPORTANT: This takes **filesystem paths**, not import names
+packages = ["src/genexpressor"]
+force-include = { "src/genexpressor/resources/deseq2_runner.R" = "genexpressor/resources/deseq2_runner.R" }
